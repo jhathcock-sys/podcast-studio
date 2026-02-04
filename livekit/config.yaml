@@ -1,0 +1,58 @@
+# LiveKit Server Configuration
+# Documentation: https://docs.livekit.io/deploy/
+
+port: 7880
+bind_addresses:
+  - "0.0.0.0"
+
+rtc:
+  # UDP ports for WebRTC
+  port_range_start: 50000
+  port_range_end: 60000
+
+  # Use mDNS for localhost/LAN (set false for production)
+  use_external_ip: true
+
+  # Set your external IP or domain
+  # external_ip: "your-public-ip-or-domain"
+
+  # TURN server configuration
+  turn_servers:
+    - host: 192.168.1.8
+      port: 3478
+      protocol: udp
+      username: ""
+      credential: ""
+
+redis:
+  address: redis:6379
+  password: ${REDIS_PASSWORD}
+
+# API Keys - IMPORTANT: Change these in production!
+keys:
+  APIKeyDev: APIsecretDev123  # Replace with secure values from .env
+
+# Room settings
+room:
+  # Enable auto-create rooms when joining
+  auto_create: true
+
+  # Empty timeout (minutes) - room closes after last participant leaves
+  empty_timeout: 300
+
+  # Max participants per room
+  max_participants: 10
+
+# Logging
+logging:
+  level: info
+  # Sample 10% of traces
+  sample: 0.1
+
+# Video encoding settings
+video:
+  # Codecs in order of preference
+  codecs:
+    - mime: "video/VP9"
+    - mime: "video/VP8"
+    - mime: "video/H264"

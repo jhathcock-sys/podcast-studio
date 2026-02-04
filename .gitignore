@@ -1,0 +1,46 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production builds
+frontend/dist/
+api/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Recordings and media
+recordings/
+processed/
+*.webm
+*.mp4
+*.mkv
+*.wav
+*.flac
+
+# Logs
+logs/
+*.log
+
+# Docker volumes
+*-data/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
