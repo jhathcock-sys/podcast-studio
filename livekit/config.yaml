@@ -40,7 +40,7 @@ room:
   # Empty timeout (minutes) - room closes after last participant leaves
   empty_timeout: 300
 
-  # Max participants per room
+  # Max participants per room (configured for 6 active participants + buffer)
   max_participants: 10
 
 # Logging

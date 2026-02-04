@@ -55,12 +55,12 @@ sudo ufw allow from 192.168.1.0/24 to any port 9000:9001 comment "MinIO"
 
 ## Storage Planning
 
-| Quality | Per Hour | 4-Person 1hr Session |
+| Quality | Per Hour | 6-Person 1hr Session |
 |---------|----------|---------------------|
-| 1080p | ~3.6 GB | ~14.4 GB |
-| 4K | ~11.25 GB | ~45 GB |
+| 1080p | ~3.6 GB | ~21.6 GB |
+| 4K | ~11.25 GB | ~67.5 GB |
 
-**Recommendation**: Plan ~50 GB per 1-hour 4K session
+**Recommendation**: Plan ~70 GB per 1-hour 6-person 4K session
 
 ### Retention Policy
 - **Raw uploads**: 7 days (auto-delete after processing)
@@ -81,7 +81,7 @@ sudo ufw allow from 192.168.1.0/24 to any port 9000:9001 comment "MinIO"
 - Client-side MediaRecorder for 4K local capture
 - Resumable uploads with Uppy.js
 - Sync marker system for alignment
-- Support for up to 4 participants
+- Support for up to 6 participants
 - Session management API
 
 ### Phase 3: Post-Processing Pipeline
